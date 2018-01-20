@@ -32,7 +32,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    temperatureLabel.text = ""
     
     //TODO:Set up the location manager here.
     locationManager.delegate = self
