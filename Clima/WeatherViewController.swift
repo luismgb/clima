@@ -80,7 +80,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     if let temperatureResult = json["main"]["temp"].double {
       
       // Temperature has to be converted from Kelvin to Fahrenheit
-      weatherDataModel.temperature = Int(temperatureResult - 273.15)
+      weatherDataModel.temperature = Int((1.8 * (temperatureResult - 273.15)) + 32)
       weatherDataModel.city = json["name"].stringValue
       weatherDataModel.condition = json["weather"][0]["id"].intValue
       weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
