@@ -100,6 +100,11 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     let location = locations[locations.count - 1]
     if location.horizontalAccuracy > 0 {
       locationManager.stopUpdatingLocation()
+      
+      //This will stop the delegate from receiving the JSON data from
+      //openweathermap.org more than once.
+      locationManager.delegate = nil
+      
       print("latitude = \(location.coordinate.latitude), longitude = \(location.coordinate.longitude)")
       
       let latitude = String(location.coordinate.latitude)
