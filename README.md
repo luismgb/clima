@@ -2,8 +2,6 @@
 
 # Clima
 
-**CURRENTLY IN DEVELOPMENT**
-
 Weather iOS App that uses either your device location or user given city.
 
 ## Authors
