@@ -9,3 +9,5 @@ Weather iOS App that uses either your device location or user given city.
 Luis M Gonzalez
 
 Assets by LondonAppBrewery.
+
+Uses openweathermap.org's API for weather data.
